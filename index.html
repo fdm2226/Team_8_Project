@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+		<link rel="stylesheet" type="text/css" 
+			href="maincss.css?version=10"/>
+		<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+		<title> University of San Fransokyo </title>
+</head>
+
+<script>
+function showHide() {
+var button = document.getElementById('tbutton');
+if (button.style.display === "none") {
+    button.style.display = "block";
+} else {
+    button.style.display = "none";
+}
+}
+
+</script>
+
+<body>		
+		<table>
+			<tr>
+				<td>
+					<img src="temp_logo.png" align="left"
+                        			width="100" height="100">
+				<td>
+				<td> 
+                        		<h1> University of San Fransokyo </h1>
+				</td>
+			</tr>
+		</table>
+   		
+		<div class="topnav" id="myTopnav" align="center">
+                        <a class="active"
+                        href="index.html">Home</a>
+                        <a href="prize.html">Prizes</a>
+                        <a href="/~Team_8/cgi-bin/lottery.cgi">Lottery</a>
+                        <a href="/~Team_8/cgi-bin/winners.cgi">Winners</a>
+                </div>
+<center>                
+<br>      
+<h2>Picture Slideshow of Our Campus</h2>
+<hr>
+
+
+<!-- Slideshow container -->
+<div class="slideshow-container">
+
+  <!-- Full-width images with number and caption text -->
+  <div class="mySlides fade">
+    <div class="numbertext">1 / 3</div>
+    <img src="campus.jpeg" style="width:100%">
+  </div>
+
+  <div class="mySlides fade">
+    <div class="numbertext">2 / 3</div>
+    <img src="library.jpeg" style="width:100%">
+  </div>
+
+  <div class="mySlides fade">
+    <div class="numbertext">3 / 3</div>
+    <img src="front.jpeg" style="width:100%">
+  </div>
+
+<!-- The dots/circles -->
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span> 
+  <span class="dot" onclick="currentSlide(2)"></span> 
+  <span class="dot" onclick="currentSlide(3)"></span> 
+</div>
+
+<script>
+var slideIndex = 0;
+showSlides();
+
+function showSlides() {
+    var i;
+    var slides = document.getElementsByClassName("mySlides");
+    var dots = document.getElementsByClassName("dot");
+    for (i = 0; i < slides.length; i++) {
+       slides[i].style.display = "none";  
+    }
+    slideIndex++;
+    if (slideIndex > slides.length) {slideIndex = 1}    
+    for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex-1].style.display = "block";  
+    dots[slideIndex-1].className += " active";
+    setTimeout(showSlides, 4000);
+}
+</script>
+</center>
+
+<!--
+<p><center>
+<img src="campus.jpeg" alt="Campus" height="300" width="300">
+<img src="library.jpeg" alt="Library" height="300" width="300">
+<img src="front.jpeg" alt="Front" height="300" width="300">
+</center>
+</p>
+-->
+<br>                
+<h2>History</h2>
+<hr>
+<p>University of San Fransokyo is one of the world's leading schools. The school was built over 100 years and it is ranked #1 in the whole world. It is attended by various students who study in the fields of science and technology. Every year, the school holds a convention at its Exposition Hall, where up-and-coming geniuses are meant to showcase new creations to receive acceptance into the university.</p>
+
+<h2>Student Testimonials</h2>
+<hr>
+<p>
+<button type="button" onclick="showHide()">
+Click to show/hide testimonials.</button>
+
+<p id="tbutton" style="display:none">
+"This is the best school I've ever attended!" - Lebron J.
+<br>
+"Great professors! Awesome classes and excellent students!" - Kobe B.
+<br>
+"Exceptional athletic program, ended up getting a full-ride scholarship from them!" - Stephen C.
+</p>
+
+<h2>WIN FREE PRIZES!</h2>
+<hr>
+<p>Want to win free tuition for a semester or a free laptop? Check out our <a href="/~Team_8/cgi-bin/lottery.cgi">Lottery Page</a> for your chance to win! All you need to do is fill out your information and click the "SPIN TO WIN" button and see what prizes you're able to get!</p>
+
+
+
+<div class="footer"><p><b>Team 8</b><br>
+Joshua Castillo | Misak Tivriktsyan | Francisco Medina | Sevada Haghverdian | Charles Hernandez
+</p></div>
+</body>
+
+</html>
+
